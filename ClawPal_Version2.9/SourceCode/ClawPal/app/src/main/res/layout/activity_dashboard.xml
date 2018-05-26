@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/img_back"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_fav"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true">
+
+        <ImageView
+            android:id="@+id/iv_myfavpetlist"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="3dp"
+            android:src="@drawable/ic_favoritefill" />
+
+        <TextView
+            android:id="@+id/tv_myfavlist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/iv_myfavpetlist"
+            android:text="@string/myfavlist"
+            android:textColor="@color/colorWhite"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp">
+
+        <ImageView
+            android:id="@+id/activity_deshboard_img_buy_sale"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/highlite"
+            android:src="@drawable/img_buy_sale" />
+
+        <ImageView
+            android:id="@+id/activity_deshboard_img_lost_found"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_gravity="center_horizontal"
+
+            android:layout_marginTop="20dp"
+            android:background="@drawable/highlite"
+            android:src="@drawable/img_lost_found" />
+
+        <ImageView
+            android:id="@+id/activity_deshboard_img_adoption"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/highlite"
+            android:src="@drawable/img_adoption" />
+
+
+        <Button
+            android:id="@+id/activity_deshboard_img_product"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+          android:background="@drawable/product_buy_sale"
+            android:textAllCaps="false"
+            android:textSize="18sp"
+            android:tint="#FFFF00"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/tv_loginhere"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/colorWhite"
+            android:textSize="20sp"
+            android:background="@drawable/login_here_icon"
+            android:textStyle="italic" />
+    </LinearLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+
+    package="com.hnweb.clawpal">
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <uses-permission android:name="com.android.vending.BILLING" />
+
+    <uses-permission android:name="com.bicsinfotech.autobuddy.permission.MAPS_RECEIVE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+    <uses-feature
+        android:name="android.hardware.microphone"
+        android:required="false" />
+    <application
+        android:name="com.hnweb.clawpal.AppController"
+        android:allowBackup="true"
+        android:icon="@drawable/app_icon"
+        android:label="ClawPal"
+        android:exported="true"
+        android:largeHeap="true"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <provider
+            android:name=".GenericFileProvider"
+            android:authorities="${applicationId}.my.package.name.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths"/>
+        </provider>
+        <activity
+            android:name=".DashboardActivity"
+            android:theme="@style/AppThemeNoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".BuyorSale.activity.PetListActivity"
+            android:windowSoftInputMode="adjustNothing"></activity>
+        <activity
+            android:name=".BuyorSale.activity.PetListDemoActivity"
+            android:windowSoftInputMode="adjustNothing"></activity>
+        <activity
+            android:name=".BuyorSale.activity.PetDetails"
+            android:screenOrientation="portrait"></activity>
+
+        <activity android:name=".BuyorSale.activity.PetDetailsRecylerActivity"></activity>
+        <activity android:name=".login.LoginActivity"></activity>
+        <activity android:name=".login.ForgotPasswordActivity"></activity>
+
+        <activity android:name=".login.RegistrationActivity"></activity>
+        <activity
+            android:name=".BuyorSale.activity.BuyOrSalePetsActivity"
+            android:windowSoftInputMode="adjustNothing"></activity>
+        <activity android:name=".lostorfound.pet.activity.LostFoundPetsActivity"></activity>
+        <activity
+            android:name=".lostorfound.pet.activity.LostFoundPetList"
+            android:windowSoftInputMode="adjustNothing"></activity>
+        <activity
+            android:name=".lostorfound.pet.activity.LostFoundPeDemotList"
+            android:windowSoftInputMode="adjustNothing"></activity>
+
+        <activity android:name=".lostorfound.pet.activity.LostFoundPetDetails"></activity>
+        <activity
+            android:name=".adaption.activity.AdoptionPetList"
+            android:windowSoftInputMode="adjustNothing"></activity>
+        <activity
+            android:name=".adaption.activity.AdoptionDemoPetList"
+            android:windowSoftInputMode="adjustNothing"></activity>
+        <activity android:name=".adaption.activity.AdoptPetDetails"></activity>
+
+
+        <activity
+            android:name=".lostorfound.pet.activity.ReportAPetActivity"
+            android:windowSoftInputMode="adjustNothing"></activity>
+        <activity
+            android:name=".BuyorSale.activity.BuySaleDetailsSwipeListActivity"
+            android:windowSoftInputMode="adjustNothing"
+         ></activity>
+        <activity
+            android:name=".lostorfound.pet.activity.LostFoundDetailsSwipeListActivity"
+            android:windowSoftInputMode="adjustNothing"
+            ></activity>
+        <activity
+            android:name=".adaption.activity.AdoptionDetailsSwipeListActivity"
+            android:windowSoftInputMode="adjustNothing"
+            ></activity>
+        <activity
+            android:name=".BuyorSale.activity.BuySaleDemoActivity"
+            android:windowSoftInputMode="adjustNothing"></activity>
+        <activity
+            android:name=".adaption.activity.AddAPetActivity"
+            android:windowSoftInputMode="adjustNothing"></activity>
+        <activity
+            android:name=".BuyorSale.activity.MyPetListBuyorSaleActivity"
+            android:label="MyPet List"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="adjustNothing"></activity>
+        <activity
+            android:name=".lostorfound.pet.activity.MyPetListLostFoundActivity"
+            android:label="MyPet List"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="adjustNothing"></activity>
+        <activity
+            android:name=".adaption.activity.MyPetListAdaptioActivity"
+            android:label="MyPet List"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="adjustNothing"></activity>
+        <activity
+            android:name=".myfavpet.ViewPagerActivity"
+            android:label="MyPet List"
+            android:theme="@style/AppTheme"></activity>
+
+        <activity
+            android:name=".productbuysale.activity.ProductListActivity"
+            android:windowSoftInputMode="adjustNothing"></activity>
+        <activity
+            android:name=".productbuysale.activity.ProductBuyOrSalePetsActivity"
+            android:windowSoftInputMode="adjustNothing"></activity>
+    </application>
+
+</manifest>
